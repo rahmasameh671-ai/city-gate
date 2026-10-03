@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 88" width="320" height="88" fill="none">
+  <!-- City Gate Official Wordmark Vector (Zero Gold - Pure White & Slate) -->
+  <g fill="#FFFFFF">
+    <!-- 'city' -->
+    <text x="6" y="52" font-family="'Cinzel', 'Cormorant Garamond', 'Plus Jakarta Sans', sans-serif" font-weight="400" font-size="44" letter-spacing="1.5">city</text>
+    <!-- 'gate' with stylized connection -->
+    <text x="110" y="52" font-family="'Cinzel', 'Cormorant Garamond', 'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="46" letter-spacing="2">gate</text>
+    <!-- Stylized line extending from the g under 'gate' -->
+    <rect x="142" y="58" width="94" height="2.8" rx="1.4" fill="#FFFFFF"/>
+    <!-- 'NEW CAIRO' subtitle aligned under 'gate' -->
+    <text x="148" y="74" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="12" letter-spacing="4" fill="#CBD5E1">NEW CAIRO</text>
+  </g>
+</svg>
