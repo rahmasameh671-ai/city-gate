@@ -4,18 +4,12 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Form Lead Routing & Submission (Name & Phone ONLY)
+  // 1. Form Lead Routing & Submission to Zapier Webhook
   const leadForm = document.getElementById('leadCaptureForm');
   const submitBtn = document.getElementById('submitBtn');
   const successModal = document.getElementById('successModal');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
-  const modalWaBtn = document.getElementById('modalWaBtn');
   const modalLeadName = document.getElementById('modalLeadName');
-
-  // Lead Destinations:
-  // Rahma@irtkaz.com
-  // Mostafa.a.ashmawy@gmail.com
-  // Mostafa.ashmawy@irtkaz.com
 
   if (leadForm) {
     leadForm.addEventListener('submit', async (e) => {
@@ -41,61 +35,50 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'SUBMITTING...';
 
-      const payload = {
-        name: fullName,
-        phone: fullPhoneNumber,
-        country_code: countryCode,
+      // Grabbing form data PLUS background data for Zapier
+      const data = {
+        fullName: fullName,
+        phoneNumber: fullPhoneNumber,
+        landingPageUrl: window.location.href,
+        submissionDate: new Date().toISOString(),
         project: 'City Gate New Cairo',
-        agency: 'properties-z.com',
-        _subject: `New Lead: ${fullName} - City Gate New Cairo - properties-z.com`,
-        _cc: 'Mostafa.a.ashmawy@gmail.com,Mostafa.ashmawy@irtkaz.com',
-        timestamp: new Date().toISOString()
+        agency: 'properties-z.com'
       };
 
       try {
-        // Secure Lead Routing via AJAX endpoint
-        await fetch('https://formsubmit.co/ajax/Rahma@irtkaz.com', {
+        await fetch('https://hooks.zapier.com/hooks/catch/25429357/uclzmpn/', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            'Content-Type': 'application/json'
           },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(data)
         });
 
         // Store backup copy locally
         const storedLeads = JSON.parse(localStorage.getItem('properties_z_citygate_leads') || '[]');
-        storedLeads.push(payload);
+        storedLeads.push(data);
         localStorage.setItem('properties_z_citygate_leads', JSON.stringify(storedLeads));
 
-        // Prepare WhatsApp follow-up button in modal
-        const waText = encodeURIComponent(
-          `Hello properties-z.com, my name is ${fullName}. I just registered my interest for City Gate New Cairo. Please send me pricing, availability, and the brochure.`
-        );
-        modalWaBtn.href = `https://wa.me/201033373331?text=${waText}`;
         if (modalLeadName) {
           modalLeadName.textContent = fullName;
         }
 
         // Show Success Modal
-        successModal.classList.add('active');
+        successModal?.classList.add('active');
         leadForm.reset();
 
-      } catch (err) {
-        console.warn('Form routing fallback triggered:', err);
-        // Fallback store and show modal
+      } catch (error) {
+        console.error('Error submitting to Zapier webhook:', error);
+
+        // Fallback store locally and still show success so the lead is preserved
         const storedLeads = JSON.parse(localStorage.getItem('properties_z_citygate_leads') || '[]');
-        storedLeads.push(payload);
+        storedLeads.push(data);
         localStorage.setItem('properties_z_citygate_leads', JSON.stringify(storedLeads));
 
-        const waText = encodeURIComponent(
-          `Hello properties-z.com, my name is ${fullName}. I am submitting an inquiry for City Gate New Cairo (+201033373331).`
-        );
-        modalWaBtn.href = `https://wa.me/201033373331?text=${waText}`;
         if (modalLeadName) {
           modalLeadName.textContent = fullName;
         }
-        successModal.classList.add('active');
+        successModal?.classList.add('active');
         leadForm.reset();
       } finally {
         submitBtn.disabled = false;
