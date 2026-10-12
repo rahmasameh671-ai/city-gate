@@ -1,5 +1,5 @@
 /**
- * CITY GATE NEW CAIRO — BY PROPERTIES-E
+ * CITY GATE NEW CAIRO — BY PROPERTIES-Z.COM
  * JavaScript Logic & Routing (Cleaned Up & Streamlined)
  */
 
@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         phone: fullPhoneNumber,
         country_code: countryCode,
         project: 'City Gate New Cairo',
-        agency: 'properties-e',
-        _subject: `New Lead: ${fullName} - City Gate New Cairo - properties-e`,
+        agency: 'properties-z.com',
+        _subject: `New Lead: ${fullName} - City Gate New Cairo - properties-z.com`,
         _cc: 'Mostafa.a.ashmawy@gmail.com,Mostafa.ashmawy@irtkaz.com',
         timestamp: new Date().toISOString()
       };
@@ -93,13 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Store backup copy locally
-        const storedLeads = JSON.parse(localStorage.getItem('properties_e_citygate_leads') || '[]');
+        const storedLeads = JSON.parse(localStorage.getItem('properties_z_citygate_leads') || '[]');
         storedLeads.push(payload);
-        localStorage.setItem('properties_e_citygate_leads', JSON.stringify(storedLeads));
+        localStorage.setItem('properties_z_citygate_leads', JSON.stringify(storedLeads));
 
         // Prepare WhatsApp follow-up button in modal
         const waText = encodeURIComponent(
-          `Hello properties-e, my name is ${fullName}. I just registered my interest for City Gate New Cairo. Please send me pricing, availability, and the brochure.`
+          `Hello properties-z.com, my name is ${fullName}. I just registered my interest for City Gate New Cairo. Please send me pricing, availability, and the brochure.`
         );
         modalWaBtn.href = `https://wa.me/201033373331?text=${waText}`;
         if (modalLeadName) {
@@ -113,12 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (err) {
         console.warn('Form routing fallback triggered:', err);
         // Fallback store and show modal
-        const storedLeads = JSON.parse(localStorage.getItem('properties_e_citygate_leads') || '[]');
+        const storedLeads = JSON.parse(localStorage.getItem('properties_z_citygate_leads') || '[]');
         storedLeads.push(payload);
-        localStorage.setItem('properties_e_citygate_leads', JSON.stringify(storedLeads));
+        localStorage.setItem('properties_z_citygate_leads', JSON.stringify(storedLeads));
 
         const waText = encodeURIComponent(
-          `Hello properties-e, my name is ${fullName}. I am submitting an inquiry for City Gate New Cairo (+201033373331).`
+          `Hello properties-z.com, my name is ${fullName}. I am submitting an inquiry for City Gate New Cairo (+201033373331).`
         );
         modalWaBtn.href = `https://wa.me/201033373331?text=${waText}`;
         if (modalLeadName) {
