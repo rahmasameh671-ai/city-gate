@@ -25,37 +25,7 @@
 <body>
 
   <!-- ==========================================================================
-       TOP NAVIGATION BAR (MINIMAL, ZERO WHATSAPP BUTTON)
-       ========================================================================== -->
-  <header class="site-header">
-    <div class="container">
-      <div class="nav-wrapper">
-        <!-- Minimal Essential Branding with Official City Gate Logo -->
-        <a href="#hero" class="brand-combo" aria-label="City Gate by properties-z.com">
-          <img src="assets/images/citygate-official.png" alt="City Gate New Cairo" class="logo-img" width="130" height="36">
-          <div class="sub-brand-label">By <span>properties-z.com</span></div>
-        </a>
-
-        <!-- Page Navigation Links Only -->
-        <ul class="nav-links">
-          <li><a href="#inventory" class="nav-link">Inventory &amp; Pricing</a></li>
-          <li><a href="#amenities" class="nav-link">Amenities</a></li>
-          <li><a href="#location" class="nav-link">Location</a></li>
-          <li><a href="#why-us" class="nav-link">Why properties-z.com</a></li>
-          <li><a href="#about" class="nav-link">Developer</a></li>
-        </ul>
-
-        <div class="mobile-menu-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ==========================================================================
-       HERO SECTION (OFFICIAL QATARI DIAR LOGO XL, NO WHATSAPP, CLEAN FORM)
+       HERO SECTION (OFFICIAL QATARI DIAR LOGO XL, NO NAVBAR, CLEAN FORM)
        ========================================================================== -->
   <section class="hero-section" id="hero">
     <div class="hero-overlay"></div>
@@ -70,18 +40,26 @@
       <div class="hero-grid">
         <!-- Hero Left Column: Editorial & Value Proposition -->
         <div class="hero-text-block">
-          <div class="developer-badge">
-            <span class="dot"></span>
-            Premier Master Community &bull; New Cairo
+          <div class="hero-badge-group">
+            <div class="developer-badge">
+              <span class="dot"></span>
+              NEW RELEASE &bull; NEW CAIRO
+            </div>
+            <div class="hero-price-badge">
+              Starting from 9M EGP
+            </div>
           </div>
 
           <h1 class="hero-title">
-            A Place For <br>
-            The Best In You
+            An Integrated City in the Heart of New Cairo
           </h1>
 
+          <p class="hero-subtitle">
+            5% Down Payment | Installments Up to 10 Years
+          </p>
+
           <p class="hero-desc">
-            Nestled in the prestigious heart of New Cairo, City Gate represents a fully integrated, self-sustained master community spanning 8.5 million square meters. Designed by Qatari Diar to world-class standards, featuring an 18-hole championship golf course, lush expansive parks, and bespoke architectural living spaces.
+            Spanning 8.5 million square meters by Qatari Diar, featuring an 18-hole championship golf course, lush expansive parks, and luxury living spaces.
           </p>
 
           <div class="hero-pills">
@@ -102,7 +80,6 @@
               5 Mins to AUC New Cairo
             </div>
           </div>
-          <!-- Hero section WhatsApp button and direct WhatsApp text are completely removed as instructed -->
         </div>
 
         <!-- Hero Right Column: Frosted Glass Lead Capture Form (Name & Phone ONLY) -->
@@ -117,7 +94,7 @@
             <div class="form-group">
               <label for="fullName" class="form-label">Full Name</label>
               <div class="form-input-box">
-                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="e.g. Mostafa Mansour" required>
+                <input type="text" id="fullName" name="fullName" class="form-input" required>
               </div>
             </div>
 
@@ -142,7 +119,7 @@
                   <option value="+962">🇯🇴 +962</option>
                   <option value="+961">🇱🇧 +961</option>
                 </select>
-                <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" placeholder="100 123 4567" required>
+                <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" required>
               </div>
             </div>
 
@@ -355,8 +332,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
           </div>
           <div class="amenity-info">
-            <h3>18-Hole Championship Golf</h3>
-            <p>Designed by Thomson, Perret &amp; Lobb to USGA and International Gold Standards.</p>
+            <h3>18-Hole Golf</h3>
+            <p>Championship USGA standards.</p>
           </div>
         </div>
 
@@ -366,8 +343,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           </div>
           <div class="amenity-info">
-            <h3>World-Class Golf Clubhouse</h3>
-            <p>Swimming pool, tennis courts, fitness gym, health spa, ballroom, and salon.</p>
+            <h3>Golf Clubhouse</h3>
+            <p>Pool, spa, gym &amp; lounge.</p>
           </div>
         </div>
 
@@ -377,8 +354,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
           </div>
           <div class="amenity-info">
-            <h3>1,000,000 M² Ring Park</h3>
-            <p>80% green spaces encircling the community, within 200m walking distance.</p>
+            <h3>1M M² Ring Park</h3>
+            <p>80% green parkland.</p>
           </div>
         </div>
 
@@ -388,8 +365,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
           </div>
           <div class="amenity-info">
-            <h3>Integrated Sports Club</h3>
-            <p>Elite partnership with renowned sports clubs, football, basketball, and athletics.</p>
+            <h3>Sports Club</h3>
+            <p>Elite athletic facilities.</p>
           </div>
         </div>
 
@@ -399,8 +376,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
           </div>
           <div class="amenity-info">
-            <h3>720,000 M² Business Park</h3>
-            <p>Iconic CityGate Tower, corporate office parks, secure gating, and underground parking.</p>
+            <h3>Business Park</h3>
+            <p>720K M² corporate hub.</p>
           </div>
         </div>
 
@@ -410,8 +387,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
           </div>
           <div class="amenity-info">
-            <h3>300,000 M² Commercial Town</h3>
-            <p>Curated retail promenades, indoor galleria, international brands, and fine dining.</p>
+            <h3>Commercial Town</h3>
+            <p>300K M² retail &amp; dining.</p>
           </div>
         </div>
 
@@ -421,8 +398,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2z"></path><path d="M9 10h6"></path><path d="M12 7v6"></path></svg>
           </div>
           <div class="amenity-info">
-            <h3>4 International Luxury Hotels</h3>
-            <p>World-class hospitality retreats, conferences, and executive hospitality suites.</p>
+            <h3>Luxury Hotels</h3>
+            <p>4 international retreats.</p>
           </div>
         </div>
 
@@ -432,8 +409,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
           </div>
           <div class="amenity-info">
-            <h3>300-Bed International Hospital</h3>
-            <p>24/7 emergency medical care, specialized clinical units, and diagnostic laboratories.</p>
+            <h3>Medical Hospital</h3>
+            <p>300-bed international care.</p>
           </div>
         </div>
 
@@ -443,8 +420,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
           </div>
           <div class="amenity-info">
-            <h3>International Schools &amp; Education</h3>
-            <p>Exceptional learning environments empowering holistic student development.</p>
+            <h3>Premier Schools</h3>
+            <p>International campuses.</p>
           </div>
         </div>
       </div>

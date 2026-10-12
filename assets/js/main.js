@@ -4,36 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Sticky Navigation Header
-  const header = document.querySelector('.site-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
-    }
-  });
-
-  // 2. Mobile Menu Toggle
-  const menuToggle = document.querySelector('.mobile-menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-    });
-
-    // Close menu when clicking link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-      });
-    });
-  }
-
-  // 3. Form Lead Routing & Submission (Name & Phone ONLY)
+  // 1. Form Lead Routing & Submission (Name & Phone ONLY)
   const leadForm = document.getElementById('leadCaptureForm');
   const submitBtn = document.getElementById('submitBtn');
   const successModal = document.getElementById('successModal');
