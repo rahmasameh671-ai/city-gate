@@ -63,6 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
           modalLeadName.textContent = fullName;
         }
 
+        // Trigger Google Analytics Lead Conversion Event
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            event_category: 'lead_form',
+            event_label: 'City Gate Inquiry',
+            value: 1
+          });
+        }
+
         // Show Success Modal
         successModal?.classList.add('active');
         leadForm.reset();
