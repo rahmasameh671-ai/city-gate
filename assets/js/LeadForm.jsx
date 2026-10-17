@@ -17,7 +17,7 @@ export const LeadForm = () => {
       landingPageUrl: window.location.href, // Captures the full page URL
       submissionDate: new Date().toISOString(), // Captures the exact date and time
       project: "City Gate New Cairo",
-      agency: "properties-z.com",
+      agency: "properties-s",
     };
 
     try {

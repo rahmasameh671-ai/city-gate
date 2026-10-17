@@ -1,5 +1,5 @@
 /**
- * CITY GATE NEW CAIRO — BY PROPERTIES-Z.COM
+ * CITY GATE NEW CAIRO — BY PROPERTIES-S
  * JavaScript Logic & Routing (Cleaned Up & Streamlined)
  */
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         landingPageUrl: window.location.href,       // Captures the full page URL
         submissionDate: new Date().toISOString(),   // Captures the exact date and time
         project: 'City Gate New Cairo',
-        agency: 'properties-z.com'
+        agency: 'properties-s'
       };
 
       try {
@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Store backup copy locally
-        const storedLeads = JSON.parse(localStorage.getItem('properties_z_citygate_leads') || '[]');
+        const storedLeads = JSON.parse(localStorage.getItem('properties_s_citygate_leads') || '[]');
         storedLeads.push(data);
-        localStorage.setItem('properties_z_citygate_leads', JSON.stringify(storedLeads));
+        localStorage.setItem('properties_s_citygate_leads', JSON.stringify(storedLeads));
 
         // Switch to inline success state matching React LeadForm
         if (leadForm) {
